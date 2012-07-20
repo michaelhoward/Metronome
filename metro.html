@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Metronome 1.0</title>
+<link rel='stylesheet' href='metro.css'>
+</head>
+<body>
+
+<div id='tempoContainer' class='containerLeft'>
+<img id='tempoLeft' src='left.png' onclick='decreaseTempo()'></img>
+<input id='tempo' value='60'></input>
+<img id='tempoRight' src='right.png' onclick='raiseTempo()'></img><br>
+</div>
+
+<div id='signatureContainer' class='containerRight'>
+<img id='upperNumberLeft' src='left.png' onclick='decreaseUpperNumber()'></img>
+<input id='upperNumber' value='4'></input>
+<img id='UpperNumberRight' src='right.png' onclick='raiseUpperNumber()'></img><br>
+
+<img id='lowerNumberLeft' src='left.png' onclick='decreaseLowerNumber()'></img>
+<input id='lowerNumber' value='4'></input>
+<img id='lowerNumberRight' src='right.png' onclick='raiseLowerNumber()'></img><br>
+</div>
+
+<!--<input type='checkbox' id='audioOn' value='0'>Audio Enabled</input>-->
+
+</body>
+<script src='metro.js'></script>
+
+</html>

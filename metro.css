@@ -1,0 +1,25 @@
+div.containerLeft {
+position:absolute;
+top:0px;
+left:0px;
+width:300px;
+border:solid 1px black;
+text-align:center;
+}
+
+div.containerRight {
+position:absolute;
+top:0px;
+left:400px;
+width:300px;
+border:solid 1px black;
+text-align:center;
+}
+
+input {
+width:64px;
+height:64px;
+font-size:24;
+text-align:center;
+
+}
