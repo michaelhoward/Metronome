@@ -6,7 +6,7 @@ var upperNumber = document.getElementById('upperNumber');
 var lowerNumber = document.getElementById('lowerNumber');
 var tempo = document.getElementById('tempo'); 
 
-var globalTempo, globaUpperNumber, globalLowerNumber;
+var globalTempo, globalUpperNumber, globalLowerNumber;
 
 var timer;
 var currentBeat;
@@ -76,11 +76,12 @@ function update()
 	{
 		clearInterval(intervalTimer);
 	}
-	currentBeat = 0;
+	
 	globalTempo = tempo.value;
 	globalUpperNumber = upperNumber.value;
 	globalLowerNumber = lowerNumber.value;
-
+	currentBeat = globalUpperNumber+1;
+	
 	timer = 60/globalTempo;
 
 	intervalTimer = setInterval("beat()", timer*1000); 
@@ -89,19 +90,20 @@ function update()
 
 function beat()
 {
-	if (currentBeat == globalUpperNumber)
+	if (currentBeat > globalUpperNumber)
 	{
 		currentBeat = 1;
 		playNote(highSoundBuffer);
 	}
 	else
 	{
-		currentBeat++;
+		
 		playNote(lowSoundBuffer);
 	}
 	
 	// play sound
 	console.log(currentBeat);
+	currentBeat++;
 }
 
 
